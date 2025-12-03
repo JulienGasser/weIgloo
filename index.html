@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weIgloo 2026 - Weekend Igloo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">❄️ weIgloo 2026</h1>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#concept" class="nav-link">Le Concept</a></li>
+                <li><a href="#infos" class="nav-link">Infos</a></li>
+                <li><a href="#inscription" class="nav-link">S'inscrire</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Tu as toujours eu envie de dormir dans un igloo ?</h2>
+            <p class="hero-subtitle">Voilà l'occasion rêvée ! 🏔️</p>
+            <p class="hero-description">
+                Rejoins-nous pour un weekend mémorable où nous construirons ensemble des igloos
+                et passerons une nuit inoubliable dans le froid glacial des Alpes.
+            </p>
+            <button class="hero-cta" onclick="document.getElementById('infos').scrollIntoView({behavior: 'smooth'})">En savoir plus</button>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concept" class="concept">
+        <div class="concept-container">
+            <h2 class="section-title">Le Concept</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <span class="concept-icon">🏗️</span>
+                    <h3>Construire ensemble</h3>
+                    <p>On ne vient pas en touristes. On vient pour construire nos igloos de nos propres mains, en équipe, dans une ambiance conviviale et bienveillante.</p>
+                </div>
+                <div class="concept-card">
+                    <span class="concept-icon">🌨️</span>
+                    <h3>L'expérience authentique</h3>
+                    <p>Dormir une nuit complète dans un igloo qu'on vient de construire, c'est unique. Préparé à affronter le froid pour vivre ça.</p>
+                </div>
+                <div class="concept-card">
+                    <span class="concept-icon">👥</span>
+                    <h3>Esprit de groupe</h3>
+                    <p>Un weekend pour les 18-30 ans. Jeunes, dynamiques, prêts à relever des défis ensemble et créer des souvenirs inoubliables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infos Section -->
+    <section id="infos" class="infos">
+        <div class="infos-container">
+            <h2 class="section-title">Les Infos Principales</h2>
+            
+            <div class="infos-grid">
+                <div class="info-box">
+                    <h3>📅 Dates</h3>
+                    <p>15-17 janvier 2026</p>
+                    <small>Vendredi midi → Dimanche après-midi</small>
+                </div>
+
+                <div class="info-box">
+                    <h3>📍 Lieu</h3>
+                    <p>Chamonix, Haute-Savoie</p>
+                    <small>En montagne, au cœur des Alpes</small>
+                </div>
+
+                <div class="info-box">
+                    <h3>💰 Tarif</h3>
+                    <p>150 € par personne</p>
+                    <small>Logement igloo + repas inclus</small>
+                </div>
+
+                <div class="info-box">
+                    <h3>👥 Limite</h3>
+                    <p>50 participants</p>
+                    <small>Places limitées - inscris-toi vite !</small>
+                </div>
+            </div>
+
+            <div class="program">
+                <h3>📋 Programme du Weekend</h3>
+                <ul class="program-list">
+                    <li><strong>Vendredi 15h:</strong> Arrivée et accueil à Chamonix</li>
+                    <li><strong>Vendredi 16h-19h:</strong> Construction des igloos par équipes</li>
+                    <li><strong>Vendredi 19h-21h:</strong> Dîner chaud au bivouac</li>
+                    <li><strong>Samedi 8h:</strong> Petit-déjeuner à l'igloo</li>
+                    <li><strong>Samedi 9h-12h:</strong> Finitions et renforcement des igloos</li>
+                    <li><strong>Samedi 14h-17h:</strong> Activités libres (randonnée, jeux, repos)</li>
+                    <li><strong>Samedi 19h-21h:</strong> Dîner festif et feu de camp ☃️</li>
+                    <li><strong>Dimanche 8h:</strong> Dernier petit-déjeuner dans nos igloos</li>
+                    <li><strong>Dimanche 10h:</strong> Retour vers les véhicules</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sondages Section -->
+    <section id="sondages" class="sondages">
+        <div class="sondages-container">
+            <h2 class="section-title">Tes Préférences</h2>
+            <p class="sondages-subtitle">Aide-nous à mieux préparer le weekend !</p>
+            
+            <div class="poll">
+                <h3>Quel type de logement te tente le plus ?</h3>
+                <div class="poll-options">
+                    <button class="poll-btn" data-poll="logement" data-option="igloo">🏔️ Igloo classique</button>
+                    <button class="poll-btn" data-poll="logement" data-option="snow-cave">⛏️ Grotte de neige</button>
+                    <button class="poll-btn" data-poll="logement" data-option="igloo-plus">✨ Igloo luxe (chauffage)</button>
+                </div>
+                <div class="poll-results" id="logement-results">
+                    <div class="result-bar">
+                        <div class="result-label">🏔️ Igloo classique</div>
+                        <div class="result-container">
+                            <div class="result-fill" id="logement-igloo"></div>
+                        </div>
+                        <span class="result-count" id="logement-igloo-count">0</span>
+                    </div>
+                    <div class="result-bar">
+                        <div class="result-label">⛏️ Grotte de neige</div>
+                        <div class="result-container">
+                            <div class="result-fill" id="logement-snow-cave"></div>
+                        </div>
+                        <span class="result-count" id="logement-snow-cave-count">0</span>
+                    </div>
+                    <div class="result-bar">
+                        <div class="result-label">✨ Igloo luxe</div>
+                        <div class="result-container">
+                            <div class="result-fill" id="logement-igloo-plus"></div>
+                        </div>
+                        <span class="result-count" id="logement-igloo-plus-count">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poll">
+                <h3>Ton niveau de condition physique ?</h3>
+                <div class="poll-options">
+                    <button class="poll-btn" data-poll="fitness" data-option="faible">😌 Faible</button>
+                    <button class="poll-btn" data-poll="fitness" data-option="moyen">💪 Moyen</button>
+                    <button class="poll-btn" data-poll="fitness" data-option="bon">🏃 Bon</button>
+                    <button class="poll-btn" data-poll="fitness" data-option="excellent">⚡ Excellent</button>
+                </div>
+                <div class="poll-results" id="fitness-results">
+                    <div class="result-bar">
+                        <div class="result-label">😌 Faible</div>
+                        <div class="result-container">
+                            <div class="result-fill" id="fitness-faible"></div>
+                        </div>
+                        <span class="result-count" id="fitness-faible-count">0</span>
+                    </div>
+                    <div class="result-bar">
+                        <div class="result-label">💪 Moyen</div>
+                        <div class="result-container">
+                            <div class="result-fill" id="fitness-moyen"></div>
+                        </div>
+                        <span class="result-count" id="fitness-moyen-count">0</span>
+                    </div>
+                    <div class="result-bar">
+                        <div class="result-label">🏃 Bon</div>
+                        <div class="result-container">
+                            <div class="result-fill" id="fitness-bon"></div>
+                        </div>
+                        <span class="result-count" id="fitness-bon-count">0</span>
+                    </div>
+                    <div class="result-bar">
+                        <div class="result-label">⚡ Excellent</div>
+                        <div class="result-container">
+                            <div class="result-fill" id="fitness-excellent"></div>
+                        </div>
+                        <span class="result-count" id="fitness-excellent-count">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compteur inscrits -->
+            <div class="registered-counter">
+                <p class="counter-label">Inscrits pour le moment :</p>
+                <div class="counter-display">
+                    <span id="registered-count">0</span> / 50 places
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inscription Section -->
+    <section id="inscription" class="inscription">
+        <div class="inscription-container">
+            <h2 class="section-title">S'inscrire</h2>
+            <p class="inscription-subtitle">Complète le formulaire ci-dessous pour confirmer ta participation</p>
+            
+            <form class="inscription-form" action="https://formspree.io/f/meqyaekr" method="POST">
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Téléphone *</label>
+                    <input type="tel" id="tel" name="tel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" min="18" max="30" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regime">Régime alimentaire</label>
+                    <select id="regime" name="regime">
+                        <option value="omnivore">Omnivore</option>
+                        <option value="vegetarien">Végétarien</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="sans-gluten">Sans gluten</option>
+                        <option value="allergies">Allergies</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="allergies">Allergies / Remarques</label>
+                    <textarea id="allergies" name="allergies" rows="4" placeholder="Raconte-nous tes allergies ou remarques importantes..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="cgu" required>
+                        J'accepte les conditions d'utilisation *
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">✅ Confirmer mon inscription</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 weIgloo 2026. Tous droits réservés. ❄️</p>
+        <p>Une organisation de passionnés par la montagne et les igloos !</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
